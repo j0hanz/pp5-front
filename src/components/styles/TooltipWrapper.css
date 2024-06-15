@@ -1,0 +1,13 @@
+.tooltip.custom-tooltip .tooltip-inner {
+  background-color: rgba(199, 199, 199, 0.8);
+  color: #050404;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-top: 7px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip.custom-tooltip .arrow::before {
+  border-bottom-color: rgba(199, 199, 199, 0.8);
+}

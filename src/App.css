@@ -24,6 +24,23 @@ a:hover {
   color: #ffffff;
 }
 
+.nav-link-effect {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link-effect:hover {
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+.nav-link-effect span {
+  display: inline-flex;
+  align-items: center;
+}
+
 .logo-nav {
   width: 145px;
 }

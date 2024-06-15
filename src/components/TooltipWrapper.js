@@ -1,24 +1,26 @@
 import React, { useCallback } from 'react';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import './styles/TooltipWrapper.css';
 
 const TooltipWrapper = React.memo(
-  ({ children, message, placement = 'bottom' }) => {
+  ({ children, message, placement = 'bottom', tooltipClass }) => {
     const renderTooltip = useCallback(
       (props) => (
         <Tooltip
           id={`tooltip-${message.toLowerCase().replace(/ /g, '-')}`}
           {...props}
+          className={tooltipClass}
         >
           {message}
         </Tooltip>
       ),
-      [message],
+      [message, tooltipClass],
     );
 
     return (
       <OverlayTrigger
         placement={placement}
-        delay={{ show: 100, hide: 500 }}
+        delay={{ show: 100, hide: 400 }}
         overlay={renderTooltip}
       >
         {children}

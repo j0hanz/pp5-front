@@ -28,15 +28,16 @@ const NavBar = () => {
           <img src={logo} alt="Logo" className="logo-nav" />
         </Navbar.Brand>
         <Nav className="mx-auto">
-          <Nav.Link href="#home">
-            <TooltipWrapper message="Home">
+          <Nav.Link href="#home" className="nav-link-effect">
+            <TooltipWrapper message="Home" tooltipClass="custom-tooltip">
               <span className="d-inline-flex align-items-center">
                 <FontAwesomeIcon className="fa-xl" icon={faHouse} />
               </span>
             </TooltipWrapper>
           </Nav.Link>
-          <Nav.Link href="#about">
-            <TooltipWrapper message="About">
+
+          <Nav.Link href="#about" className="nav-link-effect">
+            <TooltipWrapper message="About" tooltipClass="custom-tooltip">
               <span className="d-inline-flex align-items-center">
                 <FontAwesomeIcon
                   className="fa-xl mx-4 mx-md-5"
@@ -45,8 +46,8 @@ const NavBar = () => {
               </span>
             </TooltipWrapper>
           </Nav.Link>
-          <Nav.Link href="#newpost">
-            <TooltipWrapper message="New Post">
+          <Nav.Link href="#post" className="nav-link-effect">
+            <TooltipWrapper message="Post" tooltipClass="custom-tooltip">
               <span className="d-inline-flex align-items-center">
                 <FontAwesomeIcon className="fa-xl" icon={faSquarePlus} />
               </span>
