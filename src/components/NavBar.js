@@ -16,6 +16,7 @@ import {
   faCircleInfo,
   faSquarePlus,
   faTimes,
+  faAngleRight,
 } from '@fortawesome/free-solid-svg-icons';
 import logo from '../assets/logo.webp';
 import nobody from '../assets/nobody.webp';
@@ -48,7 +49,7 @@ const NavBar = () => {
             >
               <span className="d-inline-flex align-items-center">
                 <FontAwesomeIcon
-                  className="fa-lg translate-middle-x"
+                  className="fa-xl translate-middle-x"
                   icon={faHouse}
                 />
               </span>
@@ -62,7 +63,7 @@ const NavBar = () => {
             >
               <span className="d-inline-flex align-items-center">
                 <FontAwesomeIcon
-                  className="fa-lg mx-5 translate-middle-x"
+                  className="fa-xl mx-4 mx-md-5 translate-middle-x"
                   icon={faCircleInfo}
                 />
               </span>
@@ -76,44 +77,60 @@ const NavBar = () => {
             >
               <span className="d-inline-flex align-items-center">
                 <FontAwesomeIcon
-                  className="fa-lg translate-middle-x"
+                  className="fa-xl translate-middle-x"
                   icon={faSquarePlus}
                 />
               </span>
             </OverlayTrigger>
           </Nav.Link>
         </Nav>
-        <Button variant="outline-light p-1" onClick={handleShow}>
-          <img src={nobody} alt="nobody" className="nobody-img" />
+        <Button variant="outline-dark p-1" onClick={handleShow}>
+          <img
+            src={nobody}
+            alt="nobody"
+            className="nobody-img rounded-circle"
+          />
         </Button>
         <Offcanvas
           show={show}
           onHide={handleClose}
           placement="end"
-          className="bg-dark text-white"
+          className="bg-dark text-white custom-offcanvas-width px-4 py-2"
         >
           <Offcanvas.Header>
-            <Offcanvas.Title>User Menu</Offcanvas.Title>
+            <img
+              src={nobody}
+              alt="nobody"
+              className="nobody-img-toggle rounded-circle"
+            />
+            <Offcanvas.Title className="mx-auto">User</Offcanvas.Title>
             <Button variant="link" className="text-white" onClick={handleClose}>
-              <FontAwesomeIcon icon={faTimes} />
+              <FontAwesomeIcon className="fa-lg" icon={faTimes} />
             </Button>
           </Offcanvas.Header>
           <hr />
-          <Offcanvas.Body>
+          <Offcanvas.Body className="px-5">
             <Nav className="flex-column">
-              <Nav.Link href="#login" aria-label="Login" className="text-white">
+              <Nav.Link
+                href="#login"
+                aria-label="Login"
+                className="text-white d-flex align-items-center btn btn-dark rounded p-2 border"
+              >
                 <FontAwesomeIcon
-                  className="fa-lg"
+                  className="fa-xl"
                   icon={faArrowRightToBracket}
-                />{' '}
-                Login
+                />
+                <span className="mx-auto">Login</span>
+                <FontAwesomeIcon className="fa-xl" icon={faAngleRight} />
               </Nav.Link>
               <Nav.Link
                 href="#signup"
                 aria-label="Sign Up"
-                className="text-white"
+                className="text-white d-flex align-items-center btn btn-dark rounded p-2 border my-3"
               >
-                <FontAwesomeIcon className="fa-lg" icon={faUserPlus} /> Sign Up
+                <FontAwesomeIcon className="fa-xl" icon={faUserPlus} />
+                <span className="mx-auto">Sign Up</span>
+                <FontAwesomeIcon className="fa-xl" icon={faAngleRight} />
               </Nav.Link>
             </Nav>
           </Offcanvas.Body>
