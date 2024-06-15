@@ -14,14 +14,14 @@ const Footer = () => {
     <footer className="footer bg-dark text-white py-2">
       <Container fluid>
         <Row className="align-items-center">
-          <Col>
+          <Col className="px-1">
             <p className="mb-0 text-white-50">
               <FontAwesomeIcon className="fa-sm px-1" icon={faCopyright} />
               2024 Blog Beat
             </p>
           </Col>
-          <Col>
-            <div className="social-links text-end">
+          <Col className="px-1">
+            <div className="social-links fa-lg text-end">
               <a
                 href="https://www.facebook.com"
                 target="_blank"

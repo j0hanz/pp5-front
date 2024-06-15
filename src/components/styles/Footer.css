@@ -6,13 +6,12 @@
 
 .social-links a {
   color: white;
-  margin: 8px;
-  font-size: 1.2rem;
+  margin: 10px;
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
   color: #007bff;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
