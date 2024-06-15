@@ -55,11 +55,13 @@ const NavBar = () => {
           </Nav.Link>
         </Nav>
         <Button variant="outline-dark p-1" onClick={handleShow}>
-          <img
-            src={nobody}
-            alt="nobody"
-            className="nobody-img rounded-circle"
-          />
+          <TooltipWrapper message="Profile" tooltipClass="custom-tooltip">
+            <img
+              src={nobody}
+              alt="nobody"
+              className="nobody-img rounded-circle"
+            />
+          </TooltipWrapper>
         </Button>
         <Offcanvas
           show={show}
