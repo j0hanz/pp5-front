@@ -8,14 +8,24 @@
 }
 
 .nav-link-effect {
-  color: #000;
+  color: #ffffff;
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-link-effect:hover {
   color: #007bff;
   transform: scale(1.1);
+}
+
+.nav-link-effect.active {
+  border-bottom: 2px solid #007bff;
+  color: #007bff;
 }
 
 .nav-link-effect span {
@@ -39,6 +49,7 @@
   width: 55px;
 }
 
+/* Responsive styles */
 @media (max-width: 575px) {
   .logo-nav {
     display: none;

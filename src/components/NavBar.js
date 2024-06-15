@@ -31,7 +31,10 @@ const NavBar = () => {
           <Nav.Link href="#home" className="nav-link-effect">
             <TooltipWrapper message="Home" tooltipClass="custom-tooltip">
               <span className="d-inline-flex align-items-center">
-                <FontAwesomeIcon className="fa-xl" icon={faHouse} />
+                <FontAwesomeIcon
+                  className="fa-xl mx-2 mx-sm-5"
+                  icon={faHouse}
+                />
               </span>
             </TooltipWrapper>
           </Nav.Link>
@@ -40,7 +43,7 @@ const NavBar = () => {
             <TooltipWrapper message="About" tooltipClass="custom-tooltip">
               <span className="d-inline-flex align-items-center">
                 <FontAwesomeIcon
-                  className="fa-xl mx-4 mx-md-5"
+                  className="fa-xl mx-2 mx-sm-5"
                   icon={faCircleInfo}
                 />
               </span>
@@ -49,7 +52,10 @@ const NavBar = () => {
           <Nav.Link href="#post" className="nav-link-effect">
             <TooltipWrapper message="Post" tooltipClass="custom-tooltip">
               <span className="d-inline-flex align-items-center">
-                <FontAwesomeIcon className="fa-xl" icon={faSquarePlus} />
+                <FontAwesomeIcon
+                  className="fa-xl mx-2 mx-sm-5"
+                  icon={faSquarePlus}
+                />
               </span>
             </TooltipWrapper>
           </Nav.Link>
