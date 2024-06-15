@@ -1,13 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Navbar,
-  Nav,
-  OverlayTrigger,
-  Tooltip,
-  Offcanvas,
-  Container,
-  Button,
-} from 'react-bootstrap';
+import { Navbar, Nav, Offcanvas, Container, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHouse,
@@ -21,18 +13,13 @@ import {
 import logo from '../assets/logo.webp';
 import nobody from '../assets/nobody.webp';
 import './styles/NavBar.css';
+import TooltipWrapper from './TooltipWrapper';
 
 const NavBar = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-  const renderTooltip = (props, message) => (
-    <Tooltip id={`tooltip-${message.toLowerCase()}`} {...props}>
-      {message}
-    </Tooltip>
-  );
 
   return (
     <Navbar className="navbar-dark bg-dark">
@@ -42,46 +29,28 @@ const NavBar = () => {
         </Navbar.Brand>
         <Nav className="mx-auto">
           <Nav.Link href="#home">
-            <OverlayTrigger
-              placement="bottom"
-              delay={{ show: 150, hide: 400 }}
-              overlay={(props) => renderTooltip(props, 'Home')}
-            >
+            <TooltipWrapper message="Home">
               <span className="d-inline-flex align-items-center">
-                <FontAwesomeIcon
-                  className="fa-xl translate-middle-x"
-                  icon={faHouse}
-                />
+                <FontAwesomeIcon className="fa-xl" icon={faHouse} />
               </span>
-            </OverlayTrigger>
+            </TooltipWrapper>
           </Nav.Link>
           <Nav.Link href="#about">
-            <OverlayTrigger
-              placement="bottom"
-              delay={{ show: 150, hide: 400 }}
-              overlay={(props) => renderTooltip(props, 'About')}
-            >
+            <TooltipWrapper message="About">
               <span className="d-inline-flex align-items-center">
                 <FontAwesomeIcon
-                  className="fa-xl mx-4 mx-md-5 translate-middle-x"
+                  className="fa-xl mx-4 mx-md-5"
                   icon={faCircleInfo}
                 />
               </span>
-            </OverlayTrigger>
+            </TooltipWrapper>
           </Nav.Link>
           <Nav.Link href="#newpost">
-            <OverlayTrigger
-              placement="bottom"
-              delay={{ show: 150, hide: 400 }}
-              overlay={(props) => renderTooltip(props, 'New Post')}
-            >
+            <TooltipWrapper message="New Post">
               <span className="d-inline-flex align-items-center">
-                <FontAwesomeIcon
-                  className="fa-xl translate-middle-x"
-                  icon={faSquarePlus}
-                />
+                <FontAwesomeIcon className="fa-xl" icon={faSquarePlus} />
               </span>
-            </OverlayTrigger>
+            </TooltipWrapper>
           </Nav.Link>
         </Nav>
         <Button variant="outline-dark p-1" onClick={handleShow}>
@@ -114,7 +83,7 @@ const NavBar = () => {
               <Nav.Link
                 href="#login"
                 aria-label="Login"
-                className="text-white d-flex align-items-center btn btn-dark rounded p-2 border"
+                className="text-white d-flex align-items-center btn btn-dark rounded p-2 border my-2"
               >
                 <FontAwesomeIcon
                   className="fa-xl"
@@ -126,7 +95,7 @@ const NavBar = () => {
               <Nav.Link
                 href="#signup"
                 aria-label="Sign Up"
-                className="text-white d-flex align-items-center btn btn-dark rounded p-2 border my-3"
+                className="text-white d-flex align-items-center btn btn-dark rounded p-2 border my-2"
               >
                 <FontAwesomeIcon className="fa-xl" icon={faUserPlus} />
                 <span className="mx-auto">Sign Up</span>
