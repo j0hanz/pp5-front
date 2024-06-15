@@ -24,7 +24,7 @@
 }
 
 .nav-link-effect.active {
-  border-bottom: 1px solid #007bff;
+  border-bottom: 0.5px solid #007bff;
   color: #007bff;
 }
 
