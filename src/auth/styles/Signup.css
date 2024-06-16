@@ -1,0 +1,9 @@
+button.btn-outline-primary {
+  background-color: transparent;
+  color: #fff;
+  width: 100%;
+}
+
+.modal-head-bg {
+  background-color: #1e1e1e;
+}
