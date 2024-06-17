@@ -10,6 +10,7 @@ import {
   faTimes,
   faAngleRight,
 } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo.webp';
 import nobody from '../assets/nobody.webp';
 import './styles/NavBar.css';
@@ -39,7 +40,7 @@ const NavBar = () => {
             <img src={logo} alt="Logo" className="logo-nav" />
           </Navbar.Brand>
           <Nav className="mx-auto">
-            <Nav.Link href="#home" className="nav-link-effect">
+            <Nav.Link as={Link} to="/" className="nav-link-effect">
               <TooltipWrapper message="Home" tooltipClass="custom-tooltip">
                 <span className="d-inline-flex align-items-center">
                   <FontAwesomeIcon
@@ -49,8 +50,7 @@ const NavBar = () => {
                 </span>
               </TooltipWrapper>
             </Nav.Link>
-
-            <Nav.Link href="#about" className="nav-link-effect">
+            <Nav.Link as={Link} to="/about" className="nav-link-effect">
               <TooltipWrapper message="About" tooltipClass="custom-tooltip">
                 <span className="d-inline-flex align-items-center">
                   <FontAwesomeIcon
@@ -60,8 +60,8 @@ const NavBar = () => {
                 </span>
               </TooltipWrapper>
             </Nav.Link>
-            <Nav.Link href="#post" className="nav-link-effect">
-              <TooltipWrapper message="Post" tooltipClass="custom-tooltip">
+            <Nav.Link as={Link} to="/newpost" className="nav-link-effect">
+              <TooltipWrapper message="New Post" tooltipClass="custom-tooltip">
                 <span className="d-inline-flex align-items-center">
                   <FontAwesomeIcon
                     className="fa-xl mx-3 mx-md-5"
