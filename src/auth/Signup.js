@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserPlus, faKey, faTimes } from '@fortawesome/free-solid-svg-icons';
 import './styles/Signup.css';
 
+// Signup component
 const Signup = ({ show, handleClose, handleShowLogin }) => {
   return (
     <Modal show={show} onHide={handleClose} centered>

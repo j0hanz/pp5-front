@@ -4,11 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
 import {
   faFacebook,
-  faTwitter,
+  faGithub,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import './styles/Footer.css';
 
+// Footer component
 const Footer = () => {
   return (
     <footer className="footer bg-dark text-white py-2">
@@ -31,12 +32,12 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
               <a
-                href="https://www.twitter.com"
+                href="https://www.github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Twitter"
+                aria-label="GitHub"
               >
-                <FontAwesomeIcon icon={faTwitter} />
+                <FontAwesomeIcon icon={faGithub} />
               </a>
               <a
                 href="https://www.instagram.com"

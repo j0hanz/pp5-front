@@ -2,8 +2,9 @@ import React from 'react';
 import { Modal, Button, Form, InputGroup } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock, faTimes } from '@fortawesome/free-solid-svg-icons';
-import './styles/Login.css'; // Import the CSS file for custom styles
+import './styles/Login.css';
 
+// Login component
 const Login = ({ show, handleClose, handleShowSignup }) => {
   return (
     <Modal show={show} onHide={handleClose} centered>

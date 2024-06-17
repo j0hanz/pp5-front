@@ -19,17 +19,26 @@ import Login from '../auth/Login';
 import Signup from '../auth/Signup';
 
 const NavBar = () => {
+  // State for Offcanvas visibility
   const [show, setShow] = useState(false);
+  // State for Login modal visibility
   const [showLogin, setShowLogin] = useState(false);
+  // State for Signup modal visibility
   const [showSignup, setShowSignup] = useState(false);
 
+  // Close the Offcanvas
   const handleClose = () => setShow(false);
+  // Show the Offcanvas
   const handleShow = () => setShow(true);
 
+  // Show the Login modal
   const handleShowLogin = () => setShowLogin(true);
+  // Close the Login modal
   const handleCloseLogin = () => setShowLogin(false);
 
+  // Show the Signup modal
   const handleShowSignup = () => setShowSignup(true);
+  // Close the Signup modal
   const handleCloseSignup = () => setShowSignup(false);
 
   return (
