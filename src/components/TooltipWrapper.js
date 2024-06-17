@@ -20,7 +20,7 @@ const TooltipWrapper = React.memo(
     return (
       <OverlayTrigger
         placement={placement}
-        delay={{ show: 100, hide: 300 }}
+        delay={{ show: 50, hide: 250 }}
         overlay={renderTooltip}
       >
         {children}

@@ -21,11 +21,7 @@
 .nav-link-effect:hover {
   color: #007bff;
   transform: scale(1.1);
-}
-
-.nav-link-effect.active {
   border-bottom: 0.5px solid #007bff;
-  color: #007bff;
 }
 
 .nav-link-effect span {
@@ -34,7 +30,7 @@
 }
 
 .logo-nav {
-  width: 145px;
+  width: 125px;
 }
 
 .nobody-img {

@@ -36,9 +36,9 @@ const NavBar = () => {
     <>
       <Navbar className="navbar-dark bg-dark">
         <Container fluid>
-          <Navbar.Brand href="#">
+          <Nav.Link as={Link} to="/">
             <img src={logo} alt="Logo" className="logo-nav" />
-          </Navbar.Brand>
+          </Nav.Link>
           <Nav className="mx-auto">
             <Nav.Link as={Link} to="/" className="nav-link-effect">
               <TooltipWrapper message="Home" tooltipClass="custom-tooltip">
